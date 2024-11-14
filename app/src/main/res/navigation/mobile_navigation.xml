@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.expoculturalaplha.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <action
+        android:id="@+id/action_homeFragment_to_galleryFragment"
+        app:destination="@id/nav_gallery" />
+
+    <action
+        android:id="@+id/action_obrasFragment_to_homeFragment"
+        app:destination="@id/nav_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.expoculturalaplha.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.expoculturalaplha.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_obras"
+        android:name="com.example.expoculturalaplha.ui.obras.ObrasFragment"
+        android:label="Obras"
+        tools:layout="@layout/fragment_obras" />
+
+    <fragment
+        android:id="@+id/nav_pesquisa"
+        android:name="com.example.expoculturalaplha.ui.search.PesquisaFragment"
+        android:label="Pesquisar"
+        tools:layout="@layout/fragment_pesquisa" />
+    <activity
+        android:id="@+id/login"
+        android:name="com.example.expoculturalaplha.Login"
+        android:label="Login"
+        android:layout="@layout/activity_login"
+        />
+    <activity
+        android:id="@+id/cadastro"
+        android:name="com.example.expoculturalaplha.Cadastro"
+        android:label="activity_cadastro"
+        tools:layout="@layout/activity_cadastro" />
+
+
+
+</navigation>
